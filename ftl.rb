@@ -5,20 +5,20 @@
 class Ftl < Formula
   desc "FTL - Towards a 𝝺-calculus for large-scale systems"
   homepage "https://github.com/TBD54566975/ftl"
-  version "0.138.2"
+  version "0.138.3"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/TBD54566975/ftl/releases/download/v0.138.2/ftl-0.138.2.darwin-arm64.tar.gz"
-      sha256 "956a268188ab5edfdbbd4c2540e81f8fec3e93e0b5bdbf0c0d124fa5c62854b3"
+      url "https://github.com/TBD54566975/ftl/releases/download/v0.138.3/ftl-0.138.3.darwin-arm64.tar.gz"
+      sha256 "7fe4637c7837fda5fe992982d84669ca6a1cc1d3fb7019ee85f019353fb3f44e"
 
       def install
         bin.install "ftl"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/TBD54566975/ftl/releases/download/v0.138.2/ftl-0.138.2.darwin-amd64.tar.gz"
-      sha256 "d36a70f4d81f80315db264ef4c782ec80dc714bde7b576afbfcbb86e441cfea1"
+      url "https://github.com/TBD54566975/ftl/releases/download/v0.138.3/ftl-0.138.3.darwin-amd64.tar.gz"
+      sha256 "9f6695a3419d360538ed853ccd58a5f2a95569657b3ca6018ce644ae0cc9de69"
 
       def install
         bin.install "ftl"
@@ -27,17 +27,17 @@ class Ftl < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/TBD54566975/ftl/releases/download/v0.138.2/ftl-0.138.2.linux-amd64.tar.gz"
-      sha256 "acf2f4b889162bfbed76f5088a34c281b12aafe24a5ac4155e298e575b9986c2"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/TBD54566975/ftl/releases/download/v0.138.3/ftl-0.138.3.linux-arm64.tar.gz"
+      sha256 "9a717d94287761c4c431034bd6bae308015fa40312a7d2405359462da7bdfa0f"
 
       def install
         bin.install "ftl"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/TBD54566975/ftl/releases/download/v0.138.2/ftl-0.138.2.linux-arm64.tar.gz"
-      sha256 "6418d3afcac1c77c18e38ccd02d6802a116467d0611e22dde1aef4a8aada310a"
+    if Hardware::CPU.intel?
+      url "https://github.com/TBD54566975/ftl/releases/download/v0.138.3/ftl-0.138.3.linux-amd64.tar.gz"
+      sha256 "ed35508e625886ef38db288ca9d86c801dcc4ed3a9c0a20512d7b928b54e1e38"
 
       def install
         bin.install "ftl"
