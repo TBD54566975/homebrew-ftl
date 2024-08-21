@@ -5,20 +5,20 @@
 class Ftl < Formula
   desc "FTL - Towards a 𝝺-calculus for large-scale systems"
   homepage "https://github.com/TBD54566975/ftl"
-  version "0.354.0"
+  version "0.354.1"
 
   on_macos do
     on_intel do
-      url "https://github.com/TBD54566975/ftl/releases/download/v0.354.0/ftl-0.354.0.darwin-amd64.tar.gz"
-      sha256 "f6e1dc53e2ce66ab730939eb35b69dc0db860ac725fc4d14aa5ff5e55d24119d"
+      url "https://github.com/TBD54566975/ftl/releases/download/v0.354.1/ftl-0.354.1.darwin-amd64.tar.gz"
+      sha256 "9607aaef29b95555bec76b3684b34ec2986a0a39450f1c4b1a2bae68afe4cbe5"
 
       def install
         bin.install "ftl"
       end
     end
     on_arm do
-      url "https://github.com/TBD54566975/ftl/releases/download/v0.354.0/ftl-0.354.0.darwin-arm64.tar.gz"
-      sha256 "08df0c0f9671ab8c99bf2027744c41012e2b2c4f5ef361c6b7196463a8e558a5"
+      url "https://github.com/TBD54566975/ftl/releases/download/v0.354.1/ftl-0.354.1.darwin-arm64.tar.gz"
+      sha256 "6f8ddad71b9815d74269ddc3843118d5e002c90c422ea2d60f23a21dd6411946"
 
       def install
         bin.install "ftl"
@@ -29,8 +29,8 @@ class Ftl < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/TBD54566975/ftl/releases/download/v0.354.0/ftl-0.354.0.linux-amd64.tar.gz"
-        sha256 "6af6ade344eaf080d725989ea6a8d25799710caa7e99713bea88c8541f35c17f"
+        url "https://github.com/TBD54566975/ftl/releases/download/v0.354.1/ftl-0.354.1.linux-amd64.tar.gz"
+        sha256 "ec99138bc9db1053525a952b48c23ae6a7e481fc45f504b4f5a030c10ed0f875"
 
         def install
           bin.install "ftl"
@@ -39,8 +39,8 @@ class Ftl < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/TBD54566975/ftl/releases/download/v0.354.0/ftl-0.354.0.linux-arm64.tar.gz"
-        sha256 "46c02d165ccaca5644221352cc4bfafd6b8a6f02a076842a3790bf32fb9d7f4b"
+        url "https://github.com/TBD54566975/ftl/releases/download/v0.354.1/ftl-0.354.1.linux-arm64.tar.gz"
+        sha256 "15c740bd529fefea3b78fbab3dd67fbeb3962447444bbaba34fd538eec837041"
 
         def install
           bin.install "ftl"
